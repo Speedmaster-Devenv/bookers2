@@ -1,7 +1,6 @@
 class BooksController < ApplicationController
   def index
     @books = Book.all
-    Rails.logger.info "$$$$$$$$$$book_path=>#{book_path(1)}"
   end
 
   def show

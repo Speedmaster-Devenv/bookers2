@@ -2,6 +2,7 @@
   <div class="row">
     <div class="col-md-3">
       <%= render 'users/show' %>
+      <%= link_to '', edit_user_path(@user.id), class: 'btn btn-outline-secondary btn-block fas fa-user-cog' %>
       <%= render 'new' %>
     </div>
     <div class="col-md-8 offset-md-1">

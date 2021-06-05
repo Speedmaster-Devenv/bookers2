@@ -1,5 +1,9 @@
 <h2>User Info</h3>
+<% if @user.image.blank? %>
 <%= image_tag('no_image.jpeg', class: 'attachment user profile_image fallback') %>
+<% else %>
+<%= attachment_image_tag @user, :image %>
+<% end %>
 <table class="table">
   <tbody>
     <tr><th>Name<th><th><%= @user.name %></th></tr>

@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
   def edit
     @user = User.find(current_user.id)
-    #@post_images = @user.post_images.page(params[:page]).reverse_order
   end
 
   def update
@@ -16,6 +15,6 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:name, :note)
+    params.require(:user).permit(:name, :image, :note)
   end
 end

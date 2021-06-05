@@ -5,20 +5,28 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+<!--* Ruby version-->
 
-* System dependencies
+<!--* System dependencies-->
 
-* Configuration
+<!--* Configuration-->
 
-* Database creation
+## Setup
+  You need to create /config/initializers/application_controller_renderer.rb and add ```Refile.secret_key```
 
-* Database initialization
+<!--* Database creation-->
 
-* How to run the test suite
+<!--* Database initialization-->
 
-* Services (job queues, cache servers, search engines, etc.)
+<!--* How to run the test suite-->
 
-* Deployment instructions
+## How to run the test suite
+  cd into the Rails application and execute the below command.
 
-* ...
+  ```bundle exec rspec spec/ --format documentation```
+
+<!--* Services (job queues, cache servers, search engines, etc.)-->
+
+<!--* Deployment instructions-->
+
+<!--* ...-->

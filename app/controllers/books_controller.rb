@@ -6,12 +6,15 @@ class BooksController < ApplicationController
 
   def show
     @book = Book.find(params[:id])
-    Rails.logger.info "#######===>#{@book.user.name}"
-    @user = User.find(current_user.id)
+    @user = User.find(@book.user_id)
   end
 
   def edit
     @book = Book.find(params[:id])
+    if @book.user_id != current_user.id
+      redirect_to books_path
+      return
+    end
   end
 
   def update
@@ -33,9 +36,7 @@ class BooksController < ApplicationController
       redirect_to book_path(@book)
     else
       flash[:alert] = @book.errors.full_messages
-      @books = Book.all
-      @book = Book.new(book_params)
-      render :index
+      redirect_to books_path
     end
   end
 

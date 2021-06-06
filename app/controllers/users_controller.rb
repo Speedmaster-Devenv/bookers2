@@ -11,7 +11,7 @@ class UsersController < ApplicationController
 
   def edit
     if params[:id].to_i != current_user.id
-      redirect_to books_path
+      redirect_to user_path(current_user.id)
       return
     end
     @user = User.find(current_user.id)

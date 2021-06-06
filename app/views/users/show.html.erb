@@ -2,12 +2,14 @@
   <div class="row">
     <div class="col-md-3">
       <%= render 'users/info' %>
+      <% if @user.id == current_user.id %>
       <%= link_to '', edit_user_path(@user.id), class: 'btn btn-outline-secondary btn-block fas fa-user-cog' %>
-      <%= render 'new' %>
+      <% end %>
+      <%= render 'books/new' %>
     </div>
     <div class="col-md-8 offset-md-1">
       <h2>Books</h2>
-      <%= render 'list' %>
+      <%= render 'books/list' %>
     </div>
   </div>
 </div>

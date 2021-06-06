@@ -3,11 +3,11 @@
     <div class="col-md-3">
       <%= render 'users/info' %>
       <%= link_to '', edit_user_path(@user.id), class: 'btn btn-outline-secondary btn-block fas fa-user-cog' %>
-      <%= render 'new' %>
+      <%= render 'books/new' %>
     </div>
     <div class="col-md-8 offset-md-1">
-      <h2>Books</h2>
-      <%= render 'list' %>
+      <h2>Users</h2>
+      <%= render 'users/list' %>
     </div>
   </div>
 </div>

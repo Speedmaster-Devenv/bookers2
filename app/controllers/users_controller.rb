@@ -21,7 +21,7 @@ class UsersController < ApplicationController
     @user = User.find(current_user.id)
     if @user.update(user_params)
       flash[:notice] = %q[You've updated user successfully.]
-      redirect_to books_path
+      redirect_to user_path(@user)
     else
       render :edit
     end

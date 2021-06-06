@@ -6,6 +6,8 @@ class BooksController < ApplicationController
 
   def show
     @book = Book.find(params[:id])
+    Rails.logger.info "#######===>#{@book.user.name}"
+    @user = User.find(current_user.id)
   end
 
   def edit
@@ -28,7 +30,7 @@ class BooksController < ApplicationController
 
     if @book.save
       flash[:notice] = 'Book was successfully created.'
-      redirect_to books_path
+      redirect_to book_path(@book)
     else
       flash[:alert] = @book.errors.full_messages
       @books = Book.all

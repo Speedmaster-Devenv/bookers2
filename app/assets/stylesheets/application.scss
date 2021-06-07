@@ -17,6 +17,11 @@
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
 
+// Alert messages
 #notice {color: green}
 #alert {color: maroon}
 #error_explanation > h2, li {color: red}
+
+// Devise
+div.field {margin-bottom: 10px}
+div.actions {margin-bottom: 10px}

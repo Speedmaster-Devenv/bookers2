@@ -1,2 +1,0 @@
-      invoke  active_record
-    conflict    db/migrate/20210605233123_add_user_id_to_book.rb
